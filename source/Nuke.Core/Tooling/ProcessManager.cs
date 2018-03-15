@@ -43,7 +43,7 @@ namespace Nuke.Core.Tooling
             var argumentsForOutput = arguments.RenderForOutput();
 
 #if NETCORE
-            if (EnvironmentInfo.IsUnix && toolPath.EndsWithOrdinalIgnoreCase("exe"))
+            if (EnvironmentInfo.IsUnix && Path.GetExtension(toolPath).EqualsOrdinalIgnoreCase("exe"))
             {
                 argumentsForExecution = $"{toolPath.DoubleQuoteIfNeeded()} {argumentsForExecution}";
                 argumentsForOutput = $"{toolPath.DoubleQuoteIfNeeded()} {argumentsForOutput}";
