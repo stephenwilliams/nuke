@@ -8,9 +8,9 @@ using Nuke.Core.Tooling;
 
 namespace Nuke.Common.Tools.DotCover
 {
-    partial class DotCoverAnalyseSettingsExtensions
+    partial class DotCoverCoverSettingsExtensions
     {
-        public static DotCoverAnalyseSettings SetTargetSettings(this DotCoverAnalyseSettings toolSettings, ToolSettings targetSettings)
+        public static DotCoverCoverSettings SetTargetSettings(this DotCoverCoverSettings toolSettings, ToolSettings targetSettings)
         {
             return toolSettings
                 .SetTargetExecutable(targetSettings.ToolPath)
@@ -18,7 +18,7 @@ namespace Nuke.Common.Tools.DotCover
                 .SetTargetWorkingDirectory(targetSettings.WorkingDirectory);
         }
         
-        public static DotCoverAnalyseSettings ResetTargetSettings(this DotCoverAnalyseSettings toolSettings)
+        public static DotCoverCoverSettings ResetTargetSettings(this DotCoverCoverSettings toolSettings)
         {
             return toolSettings
                 .ResetTargetExecutable()

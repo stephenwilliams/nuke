@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [vNext]
 - Added `StringExtensions.ReplaceRegex` for fluent regular expression replacements.
-- Added `[Tool]Tasks.[Tool]Path` property for better accessibility. 
+- Added `[Tool]Tasks.[Tool]Path` property for better accessibility.
+- Added `DotCoverTasks` aliases for `cover`, `delete`, `merge`, `report` and `zip`.
+- Changed `DotCoverTasks` and `OpenCoverTasks` to use `SetTargetSettings` instead of a delegate.
 - Changed `NukeBuild.Configuration` to be overridable but still injectable.
 - Changed `StringExtensions.JoinNewLine` to accept `PlatformFamily` parameter which designates line-endings.
 - Fixed `ProcessManager` to resolve `toolPath` from environment.

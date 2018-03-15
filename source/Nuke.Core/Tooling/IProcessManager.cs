@@ -24,7 +24,5 @@ namespace Nuke.Core.Tooling
             int? timeout = null,
             bool redirectOutput = false,
             Func<string, string> outputFilter = null);
-
-        CapturedProcessStartInfo CaptureProcessStartInfo(Action action);
     }
 }

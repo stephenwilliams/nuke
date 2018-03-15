@@ -22,18 +22,6 @@ namespace Nuke.Core.Tooling
         {
         }
 
-        public CapturedProcessStartInfo CaptureProcessStartInfo(Action action)
-        {
-            var fakeProcessManager = new CapturingProcessManager();
-            using (DelegateDisposable.CreateBracket(
-                () => Instance = fakeProcessManager,
-                () => Instance = this))
-            {
-                action();
-                return fakeProcessManager.CapturedProcessStartInfo;
-            }
-        }
-
         [CanBeNull]
         public virtual IProcess StartProcess(ToolSettings toolSettings, ProcessSettings processSettings = null)
         {
